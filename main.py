@@ -6,8 +6,9 @@ from time import sleep, time
 from re import sub
 import random
 
-global supported_languages 
+global supported_languages, startTime
 supported_languages = ['english', 'russian']
+startTime = time()
 
 # Get text from screenshot
 def getSceneText():
@@ -54,11 +55,10 @@ def relogin(array, image):
 # Move you character to avoid AFK
 def afk(array, image):
     keys = ['w', 'a', 's', 'd', 'space', '[', ']']
-    startTime = time()
     if array[0][0] and array[0][1] and array[0][2] and array[0][3] not in image:
         keys_select = random.randint(0, 6) # Select random key from 'keys' list
         pressed_time = random.uniform(0, 2) # Chooses how long the key should be pressed (0-2 seconds)
-        rand_wait = random.uniform(1, 20) # Chooses when the key will be pressed (between 1-245 seconds)
+        rand_wait = random.uniform(1, 225) # Chooses when the key will be pressed (between 1-225 seconds)
         pyautogui.keyDown(keys[keys_select]) # Press down key
         sleep(pressed_time) # Time used from press to release the button
         pyautogui.keyUp(keys[keys_select]) # Release key
