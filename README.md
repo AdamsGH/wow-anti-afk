@@ -2,6 +2,9 @@
 
 Just a simple Python script to avoid long queues while playing World of Warcraft: Wrath of the Lich King classic. 
 
+## Attention!
+> Currently English version is broken. We know about this and fix issue when we have some time. 
+
 ## Why does this exist?
 
 Right now it becomes really big problem, coming to the point where you can't walk away from PC to the store without fear of missing your RT or just free time to play after work. This is main reason for creating this repo. 
